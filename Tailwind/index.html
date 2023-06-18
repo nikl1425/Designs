@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html class="h-full" lang="en" ng-app="TestApp">
 
 <head>
     <meta charset="UTF-8">
@@ -14,9 +14,9 @@
     <title>Document</title>
 </head>
 
-<body class="min-h-full w-full font-Primary">
+<body class="min-h-full w-full " ng-controller="testCtrl">
     <div class="border-b border-gray-200">
-        <header class="max-w-7xl mx-auto">
+        <header class="3xl:max-w-7xl 3xl:mx-auto 3xl:px-0 mx-3 max-w-full">
             <nav class="flex py-2 ">
 
                 <div class="flex mr-auto p-1 rounded-md items-center">
@@ -28,7 +28,8 @@
                     <h1 class="text-lg font-mono font-medium">DevJourney</h1>
                 </div>
 
-                <section class="md:flex hidden"> <!-- Desktop Menu -->
+                <section class="md:flex hidden">
+                    <!-- Desktop Menu -->
                     <button class=" mx-1">
                         <img src="assets/Denmark.svg" alt="My Happy SVG" width="30"
                             class="hover:border hover:border-black rounded p-1" />
@@ -159,9 +160,9 @@
 
 
     <main class="max-w-7xl mx-auto px-4 flex flex-col space-y-4">
-
+        
         <section
-            class="bg-center bg-no-repeat bg-[url('http://127.0.0.1:5500/Designs/Tailwind/assets/istockphoto-1224500457-612x612.jpg')] bg-gray-700 bg-blend-multiply bg-cover">
+            class="bg-center bg-no-repeat bg-[url('../assets/istockphoto-1224500457-612x612.jpg')] bg-gray-700 bg-blend-multiply bg-cover">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                 <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                     We invest in the world’s potential</h1>
@@ -191,37 +192,86 @@
             <h1 class="font-extrabold text-4xl ">Features</h1>
 
             <div class="py-6 px-6">
-                <div class="grid lg:grid-cols-3 gap-8 place-content-center">
-                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-5 w-80">
-                        <div class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                              </svg>
+                <div class="grid lg:grid-cols-3 gap-4 place-content-center">
+                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-3 w-80">
+                        <div
+                            class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-10 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
                         </div>
-                        <div>
+                        <h2 class="font-semibold text-green-500 py-1">Engagerende Læring</h2>
+                        <span class="font-light text-sm py-2">
+                            Opdag vores platform til interaktiv læring af kodning og IT. Udforsk emner, få feedback og
+                            udvikl dine færdigheder. Lær sjovt og engagerende på vores platform.
+                        </span>
 
-                        </div>
+                        <a href="#"
+                            class="inline-flex items-center font-normal text-sm text-blue-600 dark:text-blue-500 hover:underline">
+                            Read their stories
+                            <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
                     </div>
-                    
-                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-5 w-80">
-                        <div class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                              </svg>
-                        </div>
-                        <div>
 
+                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-3 w-80">
+                        <div
+                            class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-10 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
                         </div>
+                        <h2 class="font-semibold text-green-500 py-1">Engagerende Læring</h2>
+                        <span class="font-light text-sm py-2">
+                            Opdag vores platform til interaktiv læring af kodning og IT. Udforsk emner, få feedback og
+                            udvikl dine færdigheder. Lær sjovt og engagerende på vores platform.
+                        </span>
+
+                        <a href="#"
+                            class="inline-flex items-center font-normal text-sm text-blue-600 dark:text-blue-500 hover:underline">
+                            Read their stories
+                            <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-5 w-80">
-                        <div class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                              </svg>
-                        </div>
-                        <div>
 
+                    <div class="bg-gray-50 rounded-lg shadow-lg px-3 py-3 w-80">
+                        <div
+                            class="flex justify-center items-center w-10 h-10 rounded-full bg-green-400 text-white p-2 mb-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-10 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                            </svg>
                         </div>
+                        <h2 class="font-semibold text-green-500 py-1">Engagerende Læring</h2>
+                        <span class="font-light text-sm py-2">
+                            Opdag vores platform til interaktiv læring af kodning og IT. Udforsk emner, få feedback og
+                            udvikl dine færdigheder. Lær sjovt og engagerende på vores platform.
+                        </span>
+
+                        <a href="#"
+                            class="inline-flex items-center font-normal text-sm text-blue-600 dark:text-blue-500 hover:underline">
+                            Read their stories
+                            <svg aria-hidden="true" class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
