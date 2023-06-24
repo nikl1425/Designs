@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 
-<body class="min-h-full w-full pb-10" ng-controller="testCtrl">
+<body class="min-h-full w-screen pb-10" ng-controller="testCtrl">
     <div class="border-b border-gray-200">
         <header class="3xl:max-w-7xl 3xl:mx-auto 3xl:px-0 mx-3 max-w-full">
             <nav class="flex py-2 ">
@@ -159,7 +159,7 @@
     </div>
 
 
-    <main class="max-w-7xl mx-auto px-4 flex flex-col space-y-4 mb-4">
+    <main class="max-w-7xl mx-auto px-6 flex flex-col space-y-4 mb-4">
 
         <section
             class="bg-center bg-no-repeat bg-[url('../assets/istockphoto-1224500457-612x612.jpg')] bg-gray-700 bg-blend-multiply bg-cover">
@@ -171,7 +171,7 @@
                     growth.</p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                     <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900">
                         Get started
                         <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -277,10 +277,10 @@
             </div>
         </section>
 
-        <section class="mx-0 md:mx-14">
-            <div class="flex flex-row">
-                <div class="basis-3/5 marked-bg rounded">
-                    <div class="flex flex-col text-center py-32 px-10">
+        <section class="my-3">
+            <div class="flex flex-row flex-wrap mx-auto">
+                <div class="lg:basis-3/5 basis-full marked-bg rounded lg:col-12">
+                    <div class="flex flex-col text-center py-20 lg:py-32 lg:px-20 px-10">
                             <h1 class="text-2xl font-mono font-semibold text-white">Behersk verdenen inden for kodning og IT</h1>
                             <p class=" text-medium text-white mt-2 font-mono">
                                 Fra grundlæggende koncepter til avancerede teknikker giver vores kurser dig mulighed for
@@ -288,11 +288,23 @@
                             </p>
                     </div>
                 </div>
-                <div class="relative inset-y-3/4 bg-white">
-                    <p>rect</p>
+                <div>
+                    <div class="lg:relative"> 
+                        <div class="lg:absolute -inset-x-10 inset-y-36">
+                            <div class="">
+                                <iframe class="rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/o_vyp_JvgsU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <section>
+            <div class="mt-20">
+                react
+
+            </div>
         </section>
 
     </main>
